@@ -13,7 +13,7 @@ typedef uint32_t uint32;
   c ^= b; c -= rot(b,24); \
 }
 
-uint32 hash_bytes_uint32(uint32 k){
+int hash_bytes_uint32(uint32 k){
 	uint32	a,b,c;
 	a = b = c = 0x9e3779b9 + (uint32) sizeof(uint32) + 3923095;
 	a += k;
